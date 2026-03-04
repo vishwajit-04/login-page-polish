@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Lock, ArrowRight, Leaf } from "lucide-react";
+import { Mail, Lock, ArrowRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -29,31 +29,12 @@ const LoginCard = ({ errors }: LoginCardProps) => {
           boxShadow: "var(--shadow-soft)",
         }}
       >
-        {/* Logo */}
-        <motion.div
-          className="flex items-center justify-center mb-8"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-        >
-          <div className="relative">
-            <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center">
-              <Leaf className="w-7 h-7 text-primary-foreground" />
-            </div>
-            <motion.div
-              className="absolute inset-0 rounded-2xl bg-primary"
-              animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </div>
-        </motion.div>
-
         {/* Title */}
         <motion.div
           className="text-center mb-8"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
         >
           <h3 className="text-2xl font-semibold text-foreground tracking-tight">
             Admin Login
@@ -80,7 +61,7 @@ const LoginCard = ({ errors }: LoginCardProps) => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.4 }}
           >
             <Label className="text-sm font-medium text-foreground mb-2 block">
               Email
@@ -108,7 +89,7 @@ const LoginCard = ({ errors }: LoginCardProps) => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 0.5 }}
           >
             <Label className="text-sm font-medium text-foreground mb-2 block">
               Password
@@ -136,7 +117,7 @@ const LoginCard = ({ errors }: LoginCardProps) => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
+            transition={{ delay: 0.6 }}
             className="pt-2"
           >
             <Button
@@ -157,7 +138,7 @@ const LoginCard = ({ errors }: LoginCardProps) => {
           className="text-center mt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.7 }}
         >
           <a
             href="/wellness-app/index.php"
